@@ -1,0 +1,21 @@
+<div >
+  <mat-form-field >
+    <input matInput [value]="filterValue ? filterValue : ''"
+    placeholder="Search lessons" (keyup)="updatedValue($event.target.value)">
+  </mat-form-field>
+
+  <mat-form-field style="margin-left: 15px">
+    <mat-select
+      placeholder="search on"
+      (selectionChange)="updatedkey($event.value)"
+      [value]="filterKey ? filterKey : 'search'">
+      <mat-option
+        *ngFor="let searchKey of searchKey"
+        [value]="searchKey.value">
+        {{ searchKey.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+

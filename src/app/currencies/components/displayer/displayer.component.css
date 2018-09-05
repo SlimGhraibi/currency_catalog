@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  bottom:  0;
+  background : white;
+  right: 32.7%;
+}
+
+mat-grid-tile {
+  background: lightcoral;
+}
+
+.search {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  background: white;
+}
+
+

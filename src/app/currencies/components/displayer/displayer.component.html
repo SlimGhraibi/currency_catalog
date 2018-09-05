@@ -1,0 +1,19 @@
+<div class="search">
+  <br>
+  <h4>Available currencies</h4>
+<app-search (searchPage)="getNewSearchPage($event)"></app-search>
+</div>
+
+<div style="margin-bottom: 70px; margin-top: 145px;">
+    <mat-grid-list #grid rowHeight="2:1">
+        <mat-grid-tile *ngFor="let currency of currencies" >
+            <app-one-currency [currency]="currency"></app-one-currency>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<div class="footer">
+  <app-pagination [totalSize]="totalSize"
+                  (paginatorPage)="getNewPage($event)">
+  </app-pagination>
+</div>
